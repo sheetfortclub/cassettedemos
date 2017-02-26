@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.39707137,8.25481542 C-0.468204534,7.56215314 -0.47064807,6.44108177 0.39707137,5.74646342 L6.65410784,0.737641232 C7.9497083,-0.299500294 9,0.205992009 9,1.86504116 L9,12.1362377 C9,13.796025 7.94997253,14.3009906 6.65410784,13.2636376 L0.39707137,8.25481542 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="13" height="18">
+            <rect x="-2" y="-2" width="13" height="18" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+        <path d="M9.39707137,8.25481542 C8.53179547,7.56215314 8.52935193,6.44108177 9.39707137,5.74646342 L15.6541078,0.737641232 C16.9497083,-0.299500294 18,0.205992009 18,1.86504116 L18,12.1362377 C18,13.796025 16.9499725,14.3009906 15.6541078,13.2636376 L9.39707137,8.25481542 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="13" height="18">
+            <rect x="7" y="-2" width="13" height="18" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-11" transform="translate(3.000000, 2.000000)">
+            <g id="Triangle-3">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use stroke="#919AA2" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+            </g>
+            <g id="Triangle-3">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use stroke="#919AA2" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,624 @@
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  letter-spacing: -.2px;
+}
+
+.wrapper {
+	&.blur {
+		filter: blur(10px);
+
+	}
+}
+
+.aboutProject{
+	display: none;
+	position: fixed;
+	left: calc(50% - 300px);
+	top: 220px;
+	max-width: 600px;
+	font-family: 'Roboto', sans-serif;
+	color: #222;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	z-index: 99999;
+	animation-name: aboutProjectIn;
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	@keyframes aboutProjectIn {
+		0% {
+			opacity: 0;
+			top: 275px;
+		}
+		100% {
+			opacity: 1;
+			top: 220px;
+		}
+	}
+
+	a {
+		color: #222;
+		padding-left: 4px;
+		padding-right: 4px;
+		font-weight: bold;
+		font-size: 14px;
+		&:hover {
+			color: #F50034;
+		}
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+
+	.closeAbout {
+		display: inline-block;
+		position: relative;
+		font-size:12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		border: 2px solid #F50034;
+		padding: 8px 16px;
+		margin-top: 14px;
+		background-color: #fff;
+		color: #F50034;
+		box-shadow: 2px 3px 0px #DEE4EA;
+		border-radius: 3px;
+		transition: 150ms;
+		outline: none;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #F50034;
+			color: #fff;
+		}
+		&.active,
+		&:active {
+			top: 3px;
+			left: 2px;
+			background-color: #F50034;
+			color: #fff;
+			box-shadow: 0px;
+		}
+
+	}
+
+}
+
+.appName {
+	position: fixed;
+	top: 24px;
+	left: 24px;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: .5px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: bolder;
+	background-image: url('../images/logoIcon.svg');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 28px;
+	background-size: 20px;
+}
+
+.appAbout {
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	letter-spacing: .5px;
+	font-weight: normal;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.messaging {
+	display: none;
+	position: absolute;
+	left: calc(50% - 200px);
+	top: 250px;
+	max-width: 400px;
+	font-family: 'Roboto', sans-serif;
+	color: #3F4C57;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	animation-name: messagingIn;
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	@keyframes messagingIn {
+		0% {
+			opacity: 0;
+			top: 275px;
+		}
+		100% {
+			opacity: 1;
+			top: 250px;
+		}
+	}
+
+	span {
+		display: block;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+
+}
+
+.recordedTrack {
+	display: none;
+	position: fixed;
+	top: calc(50% - 137px);
+	left: 0;
+	width: 100%;
+	height: 250px;
+	box-sizing: border-box;
+	padding-top: 12px;
+	z-index: 99999;
+	font-family: 'Roboto', sans-serif;
+	animation-name: realWave;
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	@keyframes realWave {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	/*&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 200px;
+		top: 73px;
+		left: 0;
+		background-color: #fff;
+		opacity: .95;
+		z-index: 3;
+	}*/
+
+	.trackInfo {
+		position: absolute;
+		top: -24px;
+		right: 10%;
+		width: auto;
+		opacity: 1;
+		padding: 20px;
+		z-index: 99999;
+		font-family: 'Roboto', sans-serif;
+		transition: 300ms;
+		background-color: rgba(255,255,255,.9);
+
+		&.off {
+			opacity: 0;
+			top: -16px;
+		}
+
+
+		.time {
+			display: block;
+			width: auto;
+			text-align: left;
+			letter-spacing: 2px;
+			box-sizing: border-box;
+			line-height: 12px;
+			margin-bottom: 10px;
+			font-size: 12px;
+			opacity: 1;
+			color: #555;
+		}
+
+		.trackName {
+			color: #111;
+			font-size:24px;
+			letter-spacing: -.2px;
+			margin-bottom: 4px;
+			cursor: pointer;
+
+			&:hover::after {
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				content: "";
+				top: 47px;
+    			right: -6px;
+				background-image: url('../images/edit-icon.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 14px;
+			}
+		}
+
+		.saveName {
+			display: none;
+			position: relative;
+			font-size:12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			border: 2px solid #F50034;
+			padding: 8px 12px;
+			background-color: #fff;
+			color: #F50034;
+			box-shadow: 2px 3px 0px #DEE4EA;
+			border-radius: 3px;
+			transition: 150ms;
+			outline: none;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #F50034;
+				color: #fff;
+			}
+			&.active,
+			&:active {
+				top: 3px;
+				left: 2px;
+				background-color: #F50034;
+				color: #fff;
+				box-shadow: 0px;
+			}
+		}
+
+		.changeName {
+			display: none;
+			outline: none;
+			border: 0;
+			font-size: 24px;
+			padding: 0px;
+			margin-bottom: 4px;
+			float: left;
+		}
+
+		a.downloadTrack {
+			font-weight: bold;
+			text-decoration: none;
+			font-size: 12px;
+			color: #F50034;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.cassetteRecorder {
+	.cassette {
+		position: fixed;
+		left: calc(50% - 162px);
+		width: 324px;
+		top: 20px;
+		img {
+			width: 100%;
+			opacity: .75;
+		}
+	}
+	
+	.controls {
+		position: fixed;
+		bottom: 44px;
+		left: calc(50% - 165px);
+		width: 330px;
+		display: inline-block;
+		height: 75px;
+		padding: 12px;
+		box-sizing: border-box;
+		font-family: 'Roboto', sans-serif;
+		z-index: 999;
+
+		.cButton {
+			position: absolute;
+			width: 75px;
+			height: 75px;
+			border: 2px solid #919AA2;
+			border-radius: 50%;
+			box-sizing: border-box;
+			background-position: center;
+			background-repeat: no-repeat;
+			box-shadow: 2px 4px 0px #DEE4EA;
+			cursor: pointer;
+			background-color: #fff;
+			transition: 50ms cubic-bezier(0.19, 1, 0.22, 1);
+
+			span {
+				position: absolute;
+				width: 75px;
+				text-align: center;
+				font-size: 11px;
+				letter-spacing: .5px;
+				font-weight: bold;
+				color: #919AA2;
+				-webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    top: -20px;
+			    opacity: 0;
+			    transition: 200ms;
+			}
+
+			&:hover {
+				box-shadow: 2px 4px 0px #D1D5DA;
+
+				span {
+					top: -26px;
+					opacity: 1;
+				}
+			}
+
+			&:active,
+			&.active {
+				top: 4px;
+				left: 2px;
+				box-shadow: 2px 2px 0px #DEE4EA inset;
+				transition: 50ms;
+
+				span {
+					transition: 0ms;
+					left: -2px;
+					top: -30px;
+				}
+			}
+		}
+		.recordingLight {
+			position: fixed;
+			width: 6px;
+			height: 6px;
+			left: calc(50% - 3px);
+			top: 28px;
+			border-radius: 50%;
+			box-sizing: border-box;
+			background-color: #919AA2;
+
+			&.On {
+				background-color: #F50034;
+			
+				.recordingStatusOn {
+					width: 100%;
+					height: 100%;
+					background-color: #F50034;
+					border-radius: 100%;
+
+					&:after {
+						content:'RECORDING...';
+						position: absolute;
+						opacity: 1;
+						bottom: -30px;
+						font-size: 11px;
+						width: 200px;
+						text-align: center;
+						left: calc(50% - 95px);
+						color: #F50034;
+						font-weight: normal;
+						letter-spacing: 2px;
+					    animation-name: textIn;
+						animation-duration: 400ms;
+						animation-iteration-count: 1;
+						animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+						@keyframes textIn {
+						    from {
+						    	opacity: 0;
+						    	bottom: -24px;
+						    }
+						    to {
+						    	opacity: 1;
+						    	bottom: -30px;
+						    }
+						}
+					}
+
+					.recordingBeacon2 {
+						width: 100%;
+						height: 100%;
+						background-color: #F50034;
+						border-radius: 100%;
+						box-sizing: border-box;
+						position: absolute;
+						animation-name: beaconTwo;
+						animation-duration: 1200ms;
+						animation-iteration-count: infinite;
+						animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						animation-delay: 600ms;
+
+						@keyframes beaconTwo {
+						    from {
+						    	width: 4px;
+						    	height: 4px;
+						    	opacity: .3;
+						    	left: calc(50% - 2px);
+						    	top: calc(50% - 2px);
+						    }
+						    to {
+						    	opacity: 0;
+						    	width: 32px;
+						    	height: 32px;
+						    	left: calc(50% - 16px);
+						    	top: calc(50% - 16px);
+						    	
+						    }
+						}
+					}
+
+				}
+			}
+			&.Play {
+				background-color: #6AC0D7;
+				
+				.playingStatus {
+					width: 100%;
+					height: 100%;
+					background-color: #6AC0D7;
+					border-radius: 100%;
+
+					&:after {
+						content:'PLAYING...';
+						position: absolute;
+						opacity: 1;
+						bottom: -30px;
+						font-size: 11px;
+						width: 200px;
+						text-align: center;
+						left: calc(50% - 95px);
+						color: #6AC0D7;
+						font-weight: normal;
+						letter-spacing: 2px;
+					    animation-name: textIn;
+						animation-duration: 400ms;
+						animation-iteration-count: 1;
+						animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+						@keyframes textIn {
+						    from {
+						    	opacity: 0;
+						    	bottom: -24px;
+						    }
+						    to {
+						    	opacity: 1;
+						    	bottom: -30px;
+						    }
+						}
+					}
+
+					.playingBeacon2 {
+						width: 100%;
+						height: 100%;
+						background-color: #6AC0D7;
+						border-radius: 100%;
+						box-sizing: border-box;
+						position: absolute;
+						animation-name: beaconTwo;
+						animation-duration: 1200ms;
+						animation-iteration-count: infinite;
+						animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						animation-delay: 600ms;
+
+						@keyframes beaconTwo {
+						    from {
+						    	width: 4px;
+						    	height: 4px;
+						    	opacity: .3;
+						    	left: calc(50% - 2px);
+						    	top: calc(50% - 2px);
+						    }
+						    to {
+						    	opacity: 0;
+						    	width: 32px;
+						    	height: 32px;
+						    	left: calc(50% - 16px);
+						    	top: calc(50% - 16px);
+						    	
+						    }
+						}
+					}
+
+				}
+			}
+		}
+		.recordBtn {
+			left: 0;
+			top: 0;
+			border: 2px solid rgba(245, 0, 52, 100);
+			background-image: url('../images/recordBtn.svg');
+			z-index: 99;
+
+			span {
+				color: #F50034;
+			}
+
+			&:active,
+			&.active {
+				box-shadow: 3px 3px 1px #B40026 inset;
+				background-color: #F50034;
+				background-image: url('../images/recordBtn-active.svg');
+			}
+
+			&.initial {
+				left: calc(50% - 37.5px);
+
+				&:active,
+				&.active {
+					left: calc(50% - 35.5px);
+				}
+			}
+		}
+		.seekBtn {
+			display: none;
+			top: 0;
+			left: 85px;
+			background-image: url('../images/seekBtn.svg');
+			z-index: 98;
+
+			&:active,
+			&.active {
+				left: 87px;
+				background-image: url('../images/seekBtn-active.svg');
+			}
+		}
+		.playBtn {
+			display: none;
+			top: 0;
+			right: 85px;
+			background-image: url('../images/playBtn.svg');
+			z-index: 98;
+
+			&:active,
+			&.active {
+				left: initial;
+				right: 83px;
+				background-image: url('../images/playBtn-active.svg');
+			}
+		}
+		.stopBtn {
+			display: none;
+			right: 0;
+			top: 0;
+			background-image: url('../images/stopBtn.svg');
+			z-index: 97;
+
+			&:active,
+			&.active {
+				left: initial;
+				right: -2px;
+				background-image: url('../images/stopBtn-active.svg');
+			}
+		}
+	}
+} /* End Cassette Recorder */
+
+.analyserWrap {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: calc(50% - 145px);
+
+	height: 500px;
+	transition: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	#analyser {
+		position: absolute;
+		bottom: calc(50% - 75px);
+
+		canvas {
+			overflow: visible;
+		}
+	}
+}
