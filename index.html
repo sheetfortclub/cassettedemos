@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Cassette Tape | by Sheet Fort Club</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+	<script src="js/wavesurfer.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+	<body>
+	<div class="aboutProject">
+		<p>Cassette Demos is a basic html5 recorder, letting you track right in the browser. Tap the recording button to start and again to stop. Playback and seek through the track, edit the demo name and download to your computer.</p>
+
+		<p>This is a chrome experiment and was developed to work only in the Google Chrome browser. It uses some technologies not yet fully supported across all browsers.</p>
+
+		<p>Technology
+			<a href="https://www.google.com/chrome/" target="_blank">Chrome</a>
+			<a href="https://en.wikipedia.org/wiki/HTML5_Audio#Web_Audio_API_and_MediaStream_Processing_API" target="_blank">Web Audio API</a>
+			<a href="https://github.com/mattdiamond/Recorderjs" target="_blank">record.js</a>
+			<a href="https://wavesurfer-js.org/" target="_blank">wavesurfer.js</a>
+		</p>
+		<div class="closeAbout">Close</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="cassetteRecorder">
+
+			<div class="appName">
+				CASSETTE DEMOS
+			</div>
+
+			<div class="appAbout">
+				ABOUT
+			</div>
+
+			<!-- Recorded Track -->
+			<div class="recordedTrack">
+				<div id="waveform"></div>
+				<div class="trackInfo off">
+					<div class="time">
+						<span id="currentTime">00:00</span> / <span id="trackDuration">00:00</span>
+					</div>
+					<input class="changeName" type="text" />
+					<button class="saveName">Save</button>
+					<div class="trackName"></div>
+					<a class="downloadTrack">DOWNLOAD</a>
+				</div>
+			</div><!-- End Recorded Track -->
+
+			<!-- Controls -->
+			<div class="controls">
+				<div class="recordingLight">
+					 <div class="recordingStatusOn">
+					 	<div class="recordingBeacon2">
+					 	</div>
+					 </div>
+					 <div class="playingStatus">
+					 	<div class="playingBeacon2">
+					 	</div>
+					 </div>
+				</div>
+				<div class="statusMessage">
+				</div>
+				<div class="recordBtn initial cButton">
+					<span class="recordStatus">RECORD</span>
+				</div>
+				<div class="seekBtn cButton">
+					<span>REWIND</span>
+				</div>
+				<div class="playBtn cButton">
+					<span>PLAY</span>
+				</div>
+				<div class="stopBtn cButton">
+					<span>STOP</span>
+				</div>
+			</div> <!-- End Controls -->
+
+		</div><!-- End cassetteRecorder -->
+		
+		<div class="analyserWrap">
+			<canvas id="analyser" width="2024" height="500"></canvas>
+		</div>
+
+		<div class="messaging"></div>
+	</div><!-- End Wrapper -->
+		
+		<script src="js/singleCassette.js"></script>
+		<script src="js/waveform.js"></script>
+		<script src="js/recorder.js"></script>
+	</body>
+</html>
